@@ -36,6 +36,12 @@ body {
     padding-left: 0;
 }
 
+.navbar.navbar-shrink {
+    height: 65px;
+    transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+}
+
 .nav-container {
     max-width: none;
     margin: 0;
@@ -46,6 +52,10 @@ body {
     width: 100%;
 }
 
+.navbar.navbar-shrink .nav-container {
+    height: 60px;
+}
+
 .nav-logo {
     display: flex;
     align-items: center;
@@ -54,6 +64,15 @@ body {
     margin-right: 3rem;
     padding-left: 0;
     margin-left: 0;
+}
+
+.navbar.navbar-shrink .logo-image {
+    height: 40px;
+    transition: height 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.navbar.navbar-shrink .nav-logo h2 {
+    font-size: 1.25rem;
+    transition: font-size 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 
 .logo-link {
@@ -172,28 +191,16 @@ body {
 }
 
 /* Hero Section */
-/* CSS Custom Properties for Hero Animation */
-:root {
-    --hero-scale: 1;
-    --hero-border-radius: 0px;
-    --hero-margin: 0px;
-}
-
 .hero {
     padding: 0;
     background: url('images/hero.jpg') center center/cover no-repeat;
     min-height: 100vh;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
-    transform: scale(var(--hero-scale));
-    border-radius: var(--hero-border-radius);
-    margin: var(--hero-margin);
-    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-                border-radius 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-                margin 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transform-origin: center top;
-    will-change: transform, border-radius, margin;
+    transition: background 0.3s ease;
 }
 
 .hero-container {

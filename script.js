@@ -48,11 +48,9 @@ const throttledScrollHandler = throttle(() => {
     const navbar = document.querySelector('.navbar');
     if (navbar) {
         if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            navbar.classList.add('navbar-shrink');
         } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+            navbar.classList.remove('navbar-shrink');
         }
     }
 }, 16);
@@ -249,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const handleHeroShrink = () => {
             const scrolled = window.pageYOffset;
             const viewportHeight = window.innerHeight;
-            const maxScroll = viewportHeight * 1.2; // Extended range for smoother effect
+            const maxScroll = viewportHeight * 0.8; // Reduced range for quicker zoom-out
             
             // Calculate progress (0 to 1) with smoother curve
             let progress = Math.min(scrolled / maxScroll, 1);
@@ -257,14 +255,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // Apply easing for smoother animation
             const easedProgress = easeOutQuart(progress);
             
-            // Calculate scale (from 1 to 0.75) with smoother transition
-            const scale = 1 - (easedProgress * 0.25);
+            // Calculate scale (from 1.1 to 1.0) - zoom OUT when scrolling
+            const scale = 1.1 - (easedProgress * 0.1);
             
-            // Calculate border radius (from 0 to 32px) with different easing
-            const borderRadius = easeOutCubic(progress) * 32;
+            // Calculate border radius (from 0 to 16px) with different easing
+            const borderRadius = easeOutCubic(progress) * 16;
             
-            // Calculate margin (from 0 to 24px) with smoother easing
-            const margin = easedProgress * 24;
+            // Calculate margin (from 0 to 12px) with smoother easing  
+            const margin = easedProgress * 12;
             
             // Apply the CSS custom properties with requestAnimationFrame for smoothness
             requestAnimationFrame(() => {
