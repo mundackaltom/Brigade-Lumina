@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Brigade Lumina</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <img src="images/brigade.png" alt="Brigade Logo" class="logo-image">
+                    <h2>Brigade Lumina</h2>
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="price.html" class="nav-link">Price</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="floor-plan.html" class="nav-link">Floor Plan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="master-plan.html" class="nav-link">Master Plan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="location.html" class="nav-link">Location</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="amenities.html" class="nav-link">Amenities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="tel:+919876543210" class="btn-call-now">Call Now</a>
+                </div>
+            </div>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Get in Touch</h1>
+            <p>Ready to find your dream home? Contact us today!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <p><a href="tel:+919876543210">+91 9876543210</a></p>
+                            <p><a href="tel:+918065432109">+91 8065432109</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@brigadelumina.com">info@brigadelumina.com</a></p>
+                            <p><a href="mailto:sales@brigadelumina.com">sales@brigadelumina.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Visit Us</h3>
+                            <p>Sales Office:<br>
+                            Brigade Lumina Sales Gallery<br>
+                            Tumkur Main Road, Chikkabidarakallu<br>
+                            West Bangalore - 560090</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Office Hours</h3>
+                            <p>Monday - Saturday: 9:00 AM - 7:00 PM<br>
+                            Sunday: 10:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number *" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="interest" required>
+                            <option value="">Select Your Interest</option>
+                            <option value="1bhk">1 BHK</option>
+                            <option value="2bhk">2 BHK</option>
+                            <option value="3bhk">3 BHK</option>
+                            <option value="4bhk">4 BHK</option>
+                            <option value="investment">Investment Purpose</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <p class="form-note">* Required fields</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact -->
+    <section class="quick-contact">
+        <div class="container">
+            <div class="quick-actions">
+                <div class="action-card">
+                    <h3>📞 Schedule a Call Back</h3>
+                    <p>Get a call from our sales team</p>
+                    <button class="btn btn-outline">Request Call Back</button>
+                </div>
+                <div class="action-card">
+                    <h3>🏠 Book Site Visit</h3>
+                    <p>Visit our sales gallery and model apartment</p>
+                    <button class="btn btn-outline">Book Site Visit</button>
+                </div>
+                <div class="action-card">
+                    <h3>📄 Download Brochure</h3>
+                    <p>Get detailed project information</p>
+                    <button class="btn btn-outline">Download Brochure</button>
+                </div>
+                <div class="action-card">
+                    <h3>💰 Get Price Quote</h3>
+                    <p>Receive personalized pricing</p>
+                    <button class="btn btn-outline">Get Quote</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Find Us</h2>
+            <div class="map-placeholder">
+                <i class="fas fa-map"></i>
+                <h3>Interactive Map</h3>
+                <p>Brigade Lumina<br>Tumkur Main Road, Chikkabidarakallu, West Bangalore</p>
+                <div class="map-directions">
+                    <a href="https://maps.google.com" target="_blank" class="btn btn-outline">Get Directions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Brigade Lumina</h3>
+                    <p>Premium residential living in West Bangalore by Brigade Group</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="price.html">Price</a></li>
+                        <li><a href="floor-plan.html">Floor Plan</a></li>
+                        <li><a href="master-plan.html">Master Plan</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Project Info</h4>
+                    <ul>
+                        <li><a href="location.html">Location</a></li>
+                        <li><a href="amenities.html">Amenities</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">RERA Details</a></li>
+                        <li><a href="#">Brochure Download</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Tumkur Main Road, Chikkabidarakallu, West Bangalore - 560073</p>
+                        <p><i class="fas fa-phone"></i> +91 80 4567 8900</p>
+                        <p><i class="fas fa-envelope"></i> info@brigadelumina.com</p>
+                        <p><i class="fas fa-clock"></i> Mon - Sun: 9:00 AM - 7:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2026 Brigade Lumina by Brigade Group. All rights reserved.</p>
+                    <div class="footer-legal">
+                        <span>RERA Registration: PRM/KA/RERA/1251/309/PR/190518/002212</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

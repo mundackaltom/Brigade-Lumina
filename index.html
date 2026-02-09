@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brigade Lumina - Illuminating Innovation</title>
+    <title>Brigade Lumina</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,700&family=Cormorant+Garamond:wght@400;600;700&family=Cinzel:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -24,30 +24,9 @@
                         <a href="index.html" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="price.html" class="nav-link">Price</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="floor-plan.html" class="nav-link">Floor Plan</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="master-plan.html" class="nav-link">Master Plan</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="gallery.html" class="nav-link">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="location.html" class="nav-link">Location</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="amenities.html" class="nav-link">Amenities</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contact.html" class="nav-link">Contact</a>
+                        <a href="contact.html" class="nav-link">Contact Us</a>
                     </li>
                 </ul>
-                <div class="nav-cta">
-                    <a href="contact.html" class="btn-call-now">Call Now</a>
-                </div>
             </div>
             <div class="nav-toggle" id="mobile-menu">
                 <span class="bar"></span>
@@ -57,8 +36,19 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <!-- Hero Section - Simplified bottom-left design -->
+    <section id="home" class="hero-redesign">
+        <div class="hero-container">
+            <!-- Bottom-Left Text Block -->
+            <div class="hero-text-block">
+                <h1 class="hero-main-title">
+                    <span class="hero-brigade">BRIGADE</span>
+                    <span class="hero-lumina">Lumina</span>
+                </h1>
+                <p class="hero-subtitle-main">Premium Homes in Bangalore</p>
+                <p class="hero-description">Thoughtfully designed residences with modern amenities</p>
+            </div>
+        </div>
     </section>
 
     <!-- Project Overview Section -->
@@ -66,326 +56,232 @@
         <div class="container">
             <div class="overview-content">
                 <div class="overview-header">
-                    <h2>By Brigade Group</h2>
-                    <p class="project-location">Located on Tumkur Main Road, Chikkabidarakallu, West Bangalore - 560090</p>
-                    <p style="margin-top: 1rem; color: #64748b; line-height: 1.7;">
-                        Brigade Lumina is a premium residential project spread across 4 acres, offering contemporary living 
-                        with world-class amenities. Strategically located on Tumkur Main Road, it provides excellent 
-                        connectivity to major IT hubs, educational institutions, and healthcare facilities.
+                    <h2>Brigade Lumina by Brigade Group</h2>
+                    <p class="project-description">
+                        Brigade Lumina is a premium residential project spread across 4 acres on Tumkur Main Road, 
+                        offering contemporary living with world-class amenities. Strategically located in West Bangalore, 
+                        it provides excellent connectivity to major IT hubs and urban conveniences.
                     </p>
-                </div>
-                <div class="project-features">
-                    <div class="feature-badge">✓ 4 Acres Premium Development</div>
-                    <div class="feature-badge">✓ EOI Offers For Early Birds</div>
-                    <div class="feature-badge">✓ 1, 2, 3 & 4 BHK Apartments</div>
-                    <div class="feature-badge">✓ 80% Open Space & Landscaping</div>
-                    <div class="feature-badge">✓ 40+ World-Class Amenities</div>
-                    <div class="feature-badge">✓ RERA Approved Project</div>
-                </div>
-                <div class="project-price">
-                    <h3>Starting from ₹65 Lakhs* onwards</h3>
-                    <p style="font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">*Price subject to change. All inclusive pricing.</p>
+                    <div class="project-price">
+                        <h3>Starting from ₹1.45 Cr</h3>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Documents Section -->
-    <section class="documents">
+    <!-- Project Snapshot Section -->
+    <section class="project-snapshot">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Brigade Lumina Documents</h2>
+                <h2 class="section-title">Project Snapshot</h2>
             </div>
-            <div class="documents-grid">
-                <div class="document-card">
-                    <a href="#" class="btn btn-download">Download Cost Sheet ⬇</a>
+            <div class="snapshot-grid">
+                <div class="snapshot-card">
+                    <div class="snapshot-icon">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h3>Total Project Land Area</h3>
+                    <p class="snapshot-value">4 Acres</p>
                 </div>
-                <div class="document-card">
-                    <a href="#" class="btn btn-download">Download Brochure ⬇</a>
+                <div class="snapshot-card">
+                    <div class="snapshot-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>No. of Towers</h3>
+                    <p class="snapshot-value">3</p>
+                </div>
+                <div class="snapshot-card">
+                    <div class="snapshot-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>No. of Units</h3>
+                    <p class="snapshot-value">416</p>
+                </div>
+                <div class="snapshot-card">
+                    <div class="snapshot-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>No. of Floors</h3>
+                    <p class="snapshot-value">2B + Stilt + G + 19 Floors</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Project Highlights -->
-    <section class="highlights">
+    <!-- Project Highlights Section -->
+    <section class="key-highlights">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Project Highlights</h2>
             </div>
             <div class="highlights-grid">
-                <div class="highlight-card">
-                    <div class="highlight-icon location-icon">📍</div>
-                    <h3>Prime Location</h3>
-                    <p>Tumkur Main Road, West Bangalore</p>
+                <div class="highlight-item">
+                    <div class="highlight-icon">🌱</div>
+                    <h3>Net Zero Project</h3>
+                    <p>Sustainable living with net-zero carbon footprint</p>
                 </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon area-icon">📐</div>
-                    <h3>Total Development</h3>
-                    <p>4.2 Acres Premium Land</p>
+                <div class="highlight-item">
+                    <div class="highlight-icon">�</div>
+                    <h3>80% Open Space</h3>
+                    <p>Abundant green spaces and recreational areas</p>
                 </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon rera-icon">🏛️</div>
-                    <h3>RERA Status</h3>
-                    <p>RERA Approved - PRM/KA/RERA/1251/446/PR/200821/003872</p>
+                <div class="highlight-item">
+                    <div class="highlight-icon">🏋️</div>
+                    <h3>Exclusive Clubhouse</h3>
+                    <p>20+ premium amenities for luxury lifestyle</p>
                 </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon variants-icon">🏠</div>
-                    <h3>Configuration</h3>
-                    <p>1, 2, 3 & 4 BHK Apartments</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon units-icon">🏢</div>
-                    <h3>Total Units</h3>
-                    <p>368 Premium Apartments</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon towers-icon">🏗️</div>
-                    <h3>Project Structure</h3>
-                    <p>3 Towers • G+21 Floors</p>
+                <div class="highlight-item">
+                    <div class="highlight-icon">�</div>
+                    <h3>Metro Connectivity</h3>
+                    <p>Manjunatha Nagar Metro station in close proximity</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Location Advantage Section -->
+    <section class="location-advantage">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">About Brigade Lumina</h2>
-                <p class="section-subtitle">
-                    We are a forward-thinking initiative dedicated to pushing the boundaries of what's possible
-                </p>
+                <h2 class="section-title">Location Advantage</h2>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Our Vision</h3>
-                    <p>
-                        Brigade Lumina represents a new era of innovation where technology meets purpose. 
-                        We believe in creating solutions that not only solve today's challenges but also 
-                        pave the way for a brighter tomorrow.
+            <div class="location-content">
+                <!-- Left Side - Text Content -->
+                <div class="location-text">
+                    <h3 class="location-heading">Strategically Located in Bangalore</h3>
+                    <p class="location-description">
+                        Brigade Lumina enjoys excellent connectivity to key transport, IT hubs, schools, and healthcare facilities.
                     </p>
-                    <h3>Our Mission</h3>
-                    <p>
-                        To develop and deploy innovative technologies that make a meaningful difference in 
-                        people's lives, while fostering a community of creators, thinkers, and changemakers 
-                        who share our vision for the future.
-                    </p>
+                    <ul class="location-features">
+                        <li>
+                            <i class="fas fa-subway"></i>
+                            <span>Manjunatha Nagar Metro Station – Close Proximity</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-road"></i>
+                            <span>Easy access to Outer Ring Road (ORR)</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-laptop"></i>
+                            <span>Near major IT parks</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-hospital"></i>
+                            <span>Close to schools, hospitals, and retail hubs</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">100+</div>
-                        <div class="stat-label">Projects Completed</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Team Members</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">25+</div>
-                        <div class="stat-label">Countries Reached</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">What We Do</h2>
-                <p class="section-subtitle">
-                    Our core areas of expertise and innovation
-                </p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Innovation</h3>
-                    <p>
-                        Pioneering breakthrough technologies and creative solutions that challenge 
-                        conventional thinking and open new possibilities.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Collaboration</h3>
-                    <p>
-                        Building strong partnerships and fostering collaborative environments where 
-                        diverse perspectives come together to create extraordinary results.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Growth</h3>
-                    <p>
-                        Accelerating progress through strategic initiatives and sustainable practices 
-                        that drive long-term success and positive impact.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Security</h3>
-                    <p>
-                        Ensuring the highest standards of security and privacy in all our solutions, 
-                        protecting what matters most to our partners and users.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>Global Impact</h3>
-                    <p>
-                        Creating solutions that transcend borders and make a positive difference in 
-                        communities around the world.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-cog"></i>
-                    </div>
-                    <h3>Technology</h3>
-                    <p>
-                        Leveraging cutting-edge technologies and emerging trends to build robust, 
-                        scalable, and future-ready solutions.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section id="team" class="team">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Team</h2>
-                <p class="section-subtitle">
-                    Meet the innovators behind Brigade Lumina
-                </p>
-            </div>
-            <div class="team-grid">
-                <div class="team-card">
-                    <div class="team-image">
-                        <div class="placeholder-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                    </div>
-                    <div class="team-info">
-                        <h3>Sarah Chen</h3>
-                        <p class="team-role">Chief Executive Officer</p>
-                        <p class="team-description">
-                            Visionary leader with 15+ years in tech innovation and strategic development.
-                        </p>
-                        <div class="team-social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-card">
-                    <div class="team-image">
-                        <div class="placeholder-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                    </div>
-                    <div class="team-info">
-                        <h3>Marcus Rodriguez</h3>
-                        <p class="team-role">Chief Technology Officer</p>
-                        <p class="team-description">
-                            Technical architect passionate about emerging technologies and scalable solutions.
-                        </p>
-                        <div class="team-social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-card">
-                    <div class="team-image">
-                        <div class="placeholder-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                    </div>
-                    <div class="team-info">
-                        <h3>Emily Johnson</h3>
-                        <p class="team-role">Head of Design</p>
-                        <p class="team-description">
-                            Creative director focused on user experience and human-centered design.
-                        </p>
-                        <div class="team-social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-dribbble"></i></a>
-                        </div>
+                
+                <!-- Right Side - Google Map -->
+                <div class="location-map">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.126542167891!2d77.49548467508012!3d12.954412887373045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3c31eb6a7e0b%3A0x72bcb750da6b8f95!2sBrigade%20Lumina%2C%20Tumkur%20Main%20Road%2C%20Chikka%20Bidarakallu%2C%20Bengaluru%2C%20Karnataka%20560073!5e0!3m2!1sen!2sin!4v1709996000000!5m2!1sen!2sin"
+                            width="100%" 
+                            height="420" 
+                            style="border:0;border-radius:12px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Brigade Lumina Project Location - Updated Pin Location">
+                        </iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Typology & Pricing Section -->
+    <section class="typology-pricing">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Get in Touch</h2>
-                <p class="section-subtitle">
-                    Ready to illuminate the future together? Let's connect.
-                </p>
+                <h2 class="section-title">Apartment Typology</h2>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p>hello@brigadelumina.com</p>
-                        </div>
+            <div class="typology-table-wrapper">
+                <div class="typology-table">
+                    <div class="table-header">
+                        <div class="table-cell header-cell">Typology</div>
+                        <div class="table-cell header-cell">SBA Range (SQFT)</div>
+                        <div class="table-cell header-cell">Pricing Range (Cr)</div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="typology-info">
+                                <i class="fas fa-home"></i>
+                                <span>2 BHK + 2T</span>
+                            </div>
                         </div>
-                        <div class="contact-details">
-                            <h3>Phone</h3>
-                            <p>+1 (555) 123-4567</p>
-                        </div>
+                        <div class="table-cell">1,090 – 1,150</div>
+                        <div class="table-cell price-cell">₹1.45 – 1.59</div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="typology-info">
+                                <i class="fas fa-building"></i>
+                                <span>3 BHK + 2T</span>
+                            </div>
                         </div>
-                        <div class="contact-details">
-                            <h3>Location</h3>
-                            <p>San Francisco, CA</p>
+                        <div class="table-cell">1,440 – 1,520</div>
+                        <div class="table-cell price-cell">₹1.90 – 2.05</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="typology-info">
+                                <i class="fas fa-city"></i>
+                                <span>3 BHK + 3T</span>
+                            </div>
                         </div>
+                        <div class="table-cell">1,770 – 1,815</div>
+                        <div class="table-cell price-cell">₹2.28 – 2.45</div>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            
+            <!-- Mobile Cards Version -->
+            <div class="typology-cards-mobile">
+                <div class="typology-card-mobile">
+                    <div class="card-header">
+                        <i class="fas fa-home"></i>
+                        <h3>2 BHK + 2T</h3>
                     </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <div class="card-detail">
+                        <span class="detail-label">SBA Range:</span>
+                        <span class="detail-value">1,090 – 1,150 SQFT</span>
                     </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    <div class="card-detail">
+                        <span class="detail-label">Pricing:</span>
+                        <span class="detail-value price">₹1.45 – 1.59 Cr</span>
                     </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <div class="typology-card-mobile">
+                    <div class="card-header">
+                        <i class="fas fa-building"></i>
+                        <h3>3 BHK + 2T</h3>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+                    <div class="card-detail">
+                        <span class="detail-label">SBA Range:</span>
+                        <span class="detail-value">1,440 – 1,520 SQFT</span>
+                    </div>
+                    <div class="card-detail">
+                        <span class="detail-label">Pricing:</span>
+                        <span class="detail-value price">₹1.90 – 2.05 Cr</span>
+                    </div>
+                </div>
+                <div class="typology-card-mobile">
+                    <div class="card-header">
+                        <i class="fas fa-city"></i>
+                        <h3>3 BHK + 3T</h3>
+                    </div>
+                    <div class="card-detail">
+                        <span class="detail-label">SBA Range:</span>
+                        <span class="detail-value">1,770 – 1,815 SQFT</span>
+                    </div>
+                    <div class="card-detail">
+                        <span class="detail-label">Pricing:</span>
+                        <span class="detail-value price">₹2.28 – 2.45 Cr</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -408,17 +304,12 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="price.html">Price</a></li>
-                        <li><a href="floor-plan.html">Floor Plan</a></li>
-                        <li><a href="master-plan.html">Master Plan</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Project Info</h4>
                     <ul>
-                        <li><a href="location.html">Location</a></li>
-                        <li><a href="amenities.html">Amenities</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                         <li><a href="#">RERA Details</a></li>
                         <li><a href="#">Brochure Download</a></li>
@@ -428,7 +319,7 @@
                     <h4>Contact Info</h4>
                     <div class="contact-info">
                         <p><i class="fas fa-map-marker-alt"></i> Tumkur Main Road, Chikkabidarakallu, West Bangalore - 560073</p>
-                        <p><i class="fas fa-phone"></i> +91 80 4567 8900</p>
+                        <p><i class="fas fa-phone"></i> +91 9876543210</p>
                         <p><i class="fas fa-envelope"></i> info@brigadelumina.com</p>
                         <p><i class="fas fa-clock"></i> Mon - Sun: 9:00 AM - 7:00 PM</p>
                     </div>
