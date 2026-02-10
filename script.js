@@ -290,4 +290,71 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         document.body.style.opacity = '1';
     }, 100);
+    
+    // Snapshot cards count-up animation
+    const observeCountUp = () => {
+        const cards = document.querySelectorAll('.snapshot-card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const valueElement = entry.target.querySelector('.snapshot-value');
+                    if (valueElement && !valueElement.classList.contains('counted')) {
+                        animateCountUp(valueElement);
+                        valueElement.classList.add('counted');
+                    }
+                }
+            });
+        }, {
+            threshold: 0.5,
+            rootMargin: '-10% 0px'
+        });
+        
+        cards.forEach(card => observer.observe(card));
+    };
+    
+    const animateCountUp = (element) => {
+        const text = element.textContent;
+        const numberMatch = text.match(/(\d+(?:,\d+)*)/);
+        
+        if (numberMatch) {
+            const fullNumber = numberMatch[1].replace(/,/g, '');
+            const targetNumber = parseInt(fullNumber);
+            const prefix = text.substring(0, numberMatch.index);
+            const suffix = text.substring(numberMatch.index + numberMatch[1].length);
+            
+            element.classList.add('counting');
+            
+            let currentNumber = 0;
+            const increment = Math.max(1, Math.floor(targetNumber / 50));
+            const duration = 1500; // 1.5 seconds
+            const steps = Math.floor(duration / 30); // ~30ms per step
+            const stepIncrement = targetNumber / steps;
+            
+            const countTimer = setInterval(() => {
+                currentNumber += stepIncrement;
+                if (currentNumber >= targetNumber) {
+                    currentNumber = targetNumber;
+                    clearInterval(countTimer);
+                    element.classList.remove('counting');
+                }
+                
+                const displayNumber = Math.floor(currentNumber);
+                const formattedNumber = displayNumber.toLocaleString();
+                element.textContent = prefix + formattedNumber + suffix;
+            }, 30);
+        } else {
+            // For non-numeric values, just add a fade-in effect
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(10px)';
+            
+            setTimeout(() => {
+                element.style.transition = 'all 0.6s ease-out';
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }, 200);
+        }
+    };
+    
+    // Initialize count-up animation
+    observeCountUp();
 });
