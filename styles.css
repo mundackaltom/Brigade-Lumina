@@ -2010,10 +2010,6 @@ section {
     border-radius: 6px;
 }
 
-.tower-details strong {
-    color: #1f2937;
-}
-
 /* New Hero Content Styles - Updated for plain background */
 .hero-content {
     position: static; /* Remove absolute positioning */
@@ -3304,5 +3300,46 @@ section {
 
     .quick-actions {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* About Us Split Layout */
+.about-split-layout {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.about-text-col {
+    flex: 1 1 55%;
+    text-align: left;
+}
+.about-image-col {
+    flex: 1 1 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-image {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 32px rgba(80, 80, 120, 0.12);
+    object-fit: contain;
+    background: #fff;
+}
+@media (max-width: 900px) {
+    .about-split-layout {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .about-text-col, .about-image-col {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .about-image {
+        max-width: 100%;
     }
 }
