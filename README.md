@@ -47,3 +47,36 @@ This project was refactored from a static HTML website into a scalable **Next.js
 
 ## 📁 Project Structure
 
+Brigade-Lumina/
+│
+├── app/
+│ ├── layout.tsx
+│ ├── page.tsx
+│ ├── contact/
+│ │ └── page.tsx
+│ └── globals.css
+│
+├── components/
+│ ├── navbar.tsx
+│ ├── footer.tsx
+│ └── ui/
+│ ├── contact-2.tsx
+│ ├── button.tsx
+│ ├── input.tsx
+│ ├── textarea.tsx
+│ └── label.tsx
+│
+├── lib/
+│ └── utils.ts
+│
+├── public/
+│ └── images/
+│
+├── temp_backup/
+│ └── original HTML files
+│
+├── tailwind.config.js
+├── postcss.config.js
+├── next.config.js
+├── package.json
+└── tsconfig.json
