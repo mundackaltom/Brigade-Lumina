@@ -3,13 +3,15 @@ import { Inter } from 'next/font/google'
 import Script from 'next/script'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
+import ScrollToTop from '@/components/ScrollToTop'
+import TopStrip from '@/components/TopStrip'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Brigade Lumina - Premium Residences',
-  description: 'Experience luxury living at Brigade Lumina with premium amenities and modern design.',
+  title: 'Brigade Lumina',
+  description: 'Premium Homes in Bangalore',
 }
 
 export default function RootLayout({
@@ -34,7 +36,9 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
+        <ScrollToTop />
         <Navbar />
+        <TopStrip />
         <main>{children}</main>
         <Footer />
         <Script 

@@ -23,18 +23,31 @@ export function Contact2({
   email,
   className,
 }: Contact2Props) {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    const formData = new FormData(event.currentTarget)
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
     const data = {
       firstName: formData.get('firstName'),
       lastName: formData.get('lastName'),
       email: formData.get('email'),
       phone: formData.get('phone'),
       message: formData.get('message'),
+    };
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const result = await res.json();
+    if (res.ok) {
+      alert("Message sent successfully!");
+    } else {
+      alert(result.error || "Something went wrong.");
     }
-    console.log('Form data submitted:', data)
-    // Here you would typically send the data to your backend
   }
 
   return (
@@ -136,6 +149,7 @@ export function Contact2({
             </Button>
           </form>
         </div>
+
       </div>
     </section>
   )
