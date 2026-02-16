@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Montserrat, Playfair_Display, Cormorant_Garamond } from 'next/font/google'
 import Script from 'next/script'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
@@ -8,6 +8,27 @@ import TopStrip from '@/components/TopStrip'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+  weight: ['800'],
+  display: 'swap',
+})
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+  weight: ['700'],
+  style: ['italic'],
+  display: 'swap',
+})
+
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ['latin'],
+  variable: '--font-cormorant',
+  weight: ['600'],
+  style: ['normal'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Brigade Lumina',
@@ -35,7 +56,7 @@ export default function RootLayout({
           rel="stylesheet" 
         />
       </head>
-      <body className={inter.className}>
+  <body className={`${inter.className} ${montserrat.variable} ${playfair.variable} ${cormorantGaramond.variable}`}>
         <ScrollToTop />
         <Navbar />
         <TopStrip />

@@ -1,7 +1,9 @@
 "use client"
 
+
 import Image from 'next/image'
 import { useEffect } from 'react'
+import { motion } from 'framer-motion'
 
 import { Gallery } from '@/components/gallery'
 import { ApartmentTypologySection } from '@/components/ApartmentTypologySection'
@@ -38,32 +40,55 @@ export default function Home() {
         </div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10">
           <div className="container mx-auto px-6 lg:px-8">
-            <h1 className="text-white mb-6">
-              <span className="block text-4xl md:text-6xl lg:text-7xl font-bold tracking-wider">BRIGADE</span>
-              <span className="block text-5xl md:text-7xl lg:text-8xl font-light italic">Lumina</span>
+            <h1 className="mb-6">
+              <motion.span
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease: 'easeOut' }}
+                className="block font-extrabold uppercase tracking-[0.25em] text-5xl md:text-7xl lg:text-8xl"
+                style={{ fontFamily: 'var(--font-montserrat)' }}
+              >
+                BRIGADE
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ delay: 0.25, duration: 0.85, ease: 'easeOut' }}
+                className="block font-medium text-6xl md:text-8xl lg:text-9xl mt-2 drop-shadow-lg bg-gradient-to-r from-amber-300 via-white to-amber-100 bg-clip-text text-transparent tracking-normal"
+                style={{ fontFamily: 'var(--font-cormorant)' }}
+              >
+                Lumina
+              </motion.span>
             </h1>
-            <p className="text-white/90 text-xl md:text-2xl font-medium">Premium Homes in Bangalore</p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.7, duration: 0.7 }}
+              className="font-light tracking-wide text-lg md:text-xl text-white/90"
+            >
+              Premium Homes in Bangalore
+            </motion.p>
           </div>
         </div>
       </section>
 
       {/* Project Overview Section */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-10 md:py-14 bg-white">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-8 md:mb-10">About Us</h2>
-              <p className="text-slate-600 text-lg leading-relaxed">
+          <div className="grid md:grid-cols-[2fr_1fr] gap-4 md:gap-8 items-center">
+            <div className="md:pr-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6 md:mb-8">About Us</h2>
+              <p className="text-slate-600 text-lg leading-relaxed text-justify max-w-3xl md:max-w-4xl">
                 Brigade Lumina is a premium residential project that redefines upscale living along the bustling Tumkur Main Road. Crafted with meticulous attention to detail, it combines modern architectural design, world-class amenities, and serene living environments. Designed for discerning homeowners, this development offers more than just a home—it presents an elevated lifestyle. From picturesque views to contemporary comforts and a secure, thoughtfully planned community, Brigade Lumina promises a living experience that is both sophisticated and harmonious.
               </p>
             </div>
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center md:justify-end">
               <Image 
                 src="/images/brigade.svg" 
                 alt="Brigade Lumina Logo"
-                width={280}
-                height={210}
-                className="max-w-[250px] md:max-w-[280px] w-full h-auto"
+                width={200}
+                height={150}
+                className="max-w-[180px] md:max-w-[200px] w-full h-auto"
               />
             </div>
           </div>
@@ -128,15 +153,15 @@ export default function Home() {
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { name: 'Manjunatha Nagara Metro Station', time: '2 min' },
+                  { name: 'Manjunatha Nagara Metro Station', time: '4 min' },
                   { name: 'Inventure Academy', time: '2 min' },
-                  { name: 'Delhi Public International School', time: '2 min' },
+                  { name: 'Delhi Public International School', time: '10 min' },
                   { name: 'IKEA', time: '5 min' },
-                  { name: 'Orion Mall', time: '15 min' },
-                  { name: 'Vaishnavi Sapphire Mall', time: '15 min' },
-                  { name: 'People Tree Hospital', time: '15 min' },
-                  { name: 'Sparsha Hospital', time: '20 min' },
-                  { name: 'Kempegowda International Airport', time: '45 min' }
+                  { name: 'Orion Mall', time: '20 min' },
+                  { name: 'Vaishnavi Sapphire Mall', time: '17 min' },
+                  { name: 'People Tree Hospital', time: '14 min' },
+                  { name: 'Sparsh Hospital', time: '15 min' },
+                  { name: 'Kempegowda International Airport', time: '1 hr' }
                 ].map((location, index) => (
                   <div key={location.name} className={`py-3 ${index % 3 === 2 ? 'border-b border-slate-200' : ''}`}>
                     <div className="flex justify-between items-center">

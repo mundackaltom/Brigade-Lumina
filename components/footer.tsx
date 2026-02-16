@@ -11,20 +11,7 @@ export function Footer() {
             <p className="text-slate-600">
               Premium residential living in West Bangalore by Brigade Group
             </p>
-            <div className="flex gap-3">
-              <a href="#" aria-label="Facebook" className="text-slate-500 hover:text-[#8b4513] transition-colors">
-                <i className="fab fa-facebook text-xl"></i>
-              </a>
-              <a href="#" aria-label="Instagram" className="text-slate-500 hover:text-[#8b4513] transition-colors">
-                <i className="fab fa-instagram text-xl"></i>
-              </a>
-              <a href="#" aria-label="YouTube" className="text-slate-500 hover:text-[#8b4513] transition-colors">
-                <i className="fab fa-youtube text-xl"></i>
-              </a>
-              <a href="#" aria-label="LinkedIn" className="text-slate-500 hover:text-[#8b4513] transition-colors">
-                <i className="fab fa-linkedin text-xl"></i>
-              </a>
-            </div>
+            {/* Social links removed as requested */}
           </div>
 
           {/* Quick Links */}

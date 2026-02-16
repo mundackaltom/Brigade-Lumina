@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { useState } from "react"
 import { Phone, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -23,30 +24,42 @@ export function Contact2({
   email,
   className,
 }: Contact2Props) {
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
+    setStatus("idle");
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
     const data = {
-      firstName: formData.get('firstName'),
-      lastName: formData.get('lastName'),
-      email: formData.get('email'),
-      phone: formData.get('phone'),
-      message: formData.get('message'),
+      firstName: formData.get("firstName"),
+      lastName: formData.get("lastName"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      message: formData.get("message"),
     };
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-    const result = await res.json();
-    if (res.ok) {
-      alert("Message sent successfully!");
-    } else {
-      alert(result.error || "Something went wrong.");
+      // 🔥 ONLY CHECK THIS
+      if (res.ok) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error("Submit error:", error);
+      setStatus("error");
     }
   }
 
@@ -147,6 +160,16 @@ export function Contact2({
             <Button type="submit" className="w-full">
               Send Message
             </Button>
+            {status === "success" && (
+              <p className="mt-4 text-green-600 font-medium transition-opacity duration-300">
+                Message sent ✅
+              </p>
+            )}
+            {status === "error" && (
+              <p className="mt-4 text-red-600 font-medium transition-opacity duration-300">
+                Something went wrong. Please try again.
+              </p>
+            )}
           </form>
         </div>
 
