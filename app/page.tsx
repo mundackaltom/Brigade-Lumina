@@ -29,7 +29,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-lumina.jpg"
+            src="/images/hero.jpg"
             alt="Brigade Lumina Hero"
             fill
             priority
