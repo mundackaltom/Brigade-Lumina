@@ -45,12 +45,14 @@ export function Footer() {
                   +91 9036747821
                 </a>
               </p>
+              {/*
               <p className="flex items-center gap-2">
                 <i className="fas fa-envelope text-[#8b4513]"></i>
                 <a href="mailto:soniasrealtymedia@gmail.com" className="hover:text-[#8b4513] transition-colors">
                   soniasrealtymedia@gmail.com
                 </a>
               </p>
+              */}
               <p className="flex items-center gap-2">
                 <i className="fas fa-clock text-[#8b4513]"></i>
                 <span className="text-sm">Mon - Sun: 9:00 AM - 7:00 PM</span>

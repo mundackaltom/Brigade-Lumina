@@ -11,7 +11,7 @@ export default function ContactPage() {
         title="Contact Brigade Lumina"
         description="Schedule a site visit or get more details about our premium residences."
         phone="+91 9036747821"
-        email="soniasrealtymedia@gmail.com"
+  // email="soniasrealtymedia@gmail.com"
         className="pt-32" // Add padding to account for fixed navbar
       />
       

@@ -84,11 +84,11 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center md:justify-end">
               <Image 
-                src="/images/brigade.svg" 
-                alt="Brigade Lumina Logo"
-                width={200}
-                height={150}
-                className="max-w-[180px] md:max-w-[200px] w-full h-auto"
+                src="/images/authorised.png" 
+                alt="Authorised Brigade Channel Partner"
+                width={320}
+                height={240}
+                className="max-w-[320px] md:max-w-[320px] w-full h-auto"
               />
             </div>
           </div>
