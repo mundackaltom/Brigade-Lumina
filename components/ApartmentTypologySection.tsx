@@ -33,7 +33,12 @@ export function ApartmentTypologySection() {
     <section className="pt-14 pb-8 bg-slate-50">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-8 md:mb-10">
-          <SafeMotion y={40}>
+          <SafeMotion
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800">
               Apartment Typology
             </h2>
@@ -42,17 +47,35 @@ export function ApartmentTypologySection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {apartments.map((apartment, index) => (
             <div key={apartment.id} className="bg-white rounded-lg p-8 shadow-sm">
-              <SafeMotion delay={index * 0.1}>
+              <SafeMotion
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ delay: index * 0.1, duration: 0.8, ease: "easeOut" }}
+                style={{ willChange: "transform" }}
+              >
                 <div className="text-[#8b4513] text-4xl mb-4 text-center">
                   <i className={apartment.icon}></i>
                 </div>
               </SafeMotion>
-              <SafeMotion delay={index * 0.1 + 0.1}>
+              <SafeMotion
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ delay: index * 0.1 + 0.1, duration: 0.8, ease: "easeOut" }}
+                style={{ willChange: "transform" }}
+              >
                 <h3 className="text-2xl font-bold text-slate-800 text-center mb-6">
                   {apartment.title}
                 </h3>
               </SafeMotion>
-              <SafeMotion delay={index * 0.1 + 0.2}>
+              <SafeMotion
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ delay: index * 0.1 + 0.2, duration: 0.8, ease: "easeOut" }}
+                style={{ willChange: "transform" }}
+              >
                 <div className="space-y-4">
                   <div className="flex justify-between items-center pb-2 border-b border-slate-200">
                     <span className="text-slate-600">SBA Range</span>
@@ -64,7 +87,13 @@ export function ApartmentTypologySection() {
                   </div>
                 </div>
               </SafeMotion>
-              <SafeMotion delay={index * 0.1 + 0.3}>
+              <SafeMotion
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ delay: index * 0.1 + 0.3, duration: 0.8, ease: "easeOut" }}
+                style={{ willChange: "transform" }}
+              >
                 <Link href="/contact" passHref legacyBehavior>
                   <button className="w-full mt-6 bg-[#8b4513] text-white py-3 px-6 rounded-lg font-semibold">
                     Enquire Now

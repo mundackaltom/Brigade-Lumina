@@ -1,60 +1,30 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useEffect, useState } from "react"
+import { motion } from "framer-motion";
+import { isIOS } from "@/lib/isIOS";
 
-function useIsIOS() {
-  const [isIOS, setIsIOS] = useState(false)
+export default function SafeMotion({ children, ...props }: any) {
+  const isiOS = isIOS();
 
-  useEffect(() => {
-    const ua = window.navigator.userAgent
-    const iOS =
-      /iPad|iPhone|iPod/.test(ua) ||
-      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
-
-    setIsIOS(iOS)
-  }, [])
-
-  return isIOS
-}
-
-interface SafeMotionProps {
-  children: React.ReactNode
-  delay?: number
-  y?: number
-  duration?: number
-}
-
-export default function SafeMotion({ 
-  children, 
-  delay = 0, 
-  y = 60, 
-  duration = 0.8 
-}: SafeMotionProps) {
-  const isIOS = useIsIOS()
-
-  if (isIOS) {
+  // iPhone → Safe minimal animation
+  if (isiOS) {
     return (
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ delay, duration, ease: "easeOut" }}
+        transition={{ duration: 0.4 }}
+        viewport={{ once: true }}
+        {...props}
       >
         {children}
       </motion.div>
-    )
+    );
   }
 
+  // Desktop + Android → Full animation
   return (
-    <motion.div
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ delay, duration, ease: "easeOut" }}
-      style={{ willChange: "transform" }}
-    >
+    <motion.div {...props}>
       {children}
     </motion.div>
-  )
+  );
 }
