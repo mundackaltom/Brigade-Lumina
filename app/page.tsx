@@ -99,33 +99,33 @@ export default function Home() {
       <section className="py-16 md:py-20 bg-slate-50">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800" data-aos="fade-up" data-aos-duration="600">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800">
               Project Snapshot
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            <div className="bg-white rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+            <div className="bg-white rounded-lg p-8 text-center shadow-sm hover:shadow-md ">
               <div className="text-[#8b4513] text-4xl mb-4">
                 <i className="fas fa-map"></i>
               </div>
               <h3 className="text-xl font-semibold text-slate-800 mb-2">Total Project Land Area</h3>
               <p className="text-2xl font-bold text-[#8b4513]">4 Acres</p>
             </div>
-            <div className="bg-white rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+            <div className="bg-white rounded-lg p-8 text-center shadow-sm hover:shadow-md ">
               <div className="text-[#8b4513] text-4xl mb-4">
                 <i className="fas fa-building"></i>
               </div>
               <h3 className="text-xl font-semibold text-slate-800 mb-2">No. of Towers</h3>
               <p className="text-2xl font-bold text-[#8b4513]">3</p>
             </div>
-            <div className="bg-white rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+            <div className="bg-white rounded-lg p-8 text-center shadow-sm hover:shadow-md ">
               <div className="text-[#8b4513] text-4xl mb-4">
                 <i className="fas fa-home"></i>
               </div>
               <h3 className="text-xl font-semibold text-slate-800 mb-2">No. of Units</h3>
               <p className="text-2xl font-bold text-[#8b4513]">416</p>
             </div>
-            <div className="bg-white rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+            <div className="bg-white rounded-lg p-8 text-center shadow-sm hover:shadow-md ">
               <div className="text-[#8b4513] text-4xl mb-4">
                 <i className="fas fa-layer-group"></i>
               </div>
@@ -140,13 +140,13 @@ export default function Home() {
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800" data-aos="fade-up" data-aos-duration="600">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800">
               Location Advantage
             </h2>
           </div>
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
             {/* Left Side - Text Content */}
-            <div data-aos="fade-right" data-aos-duration="700" data-aos-delay="100">
+            <div>
               <h3 className="text-2xl font-bold text-slate-800 mb-6">Strategically Located in Bangalore</h3>
               <p className="text-lg text-slate-600 mb-6">
                 Brigade Lumina enjoys excellent connectivity to key transport, IT hubs, schools, and healthcare facilities.
@@ -174,7 +174,7 @@ export default function Home() {
             </div>
             
             {/* Right Side - Google Map */}
-            <div data-aos="fade-left" data-aos-duration="700" data-aos-delay="200">
+            <div>
               <div className="w-full h-full rounded-xl overflow-hidden shadow-lg">
                 <iframe
                   src="https://www.google.com/maps?q=13.0502626,77.4913510&z=16&output=embed"
@@ -194,30 +194,30 @@ export default function Home() {
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800" data-aos="fade-up" data-aos-duration="600">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800">
               Project Highlights
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            <div className="text-center p-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
+            <div className="text-center p-6">
               <div className="text-[#8b4513] text-5xl mb-4">
                 <i className="fas fa-leaf"></i>
               </div>
               <h3 className="text-xl font-semibold text-slate-800">Net Zero Project</h3>
             </div>
-            <div className="text-center p-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
+            <div className="text-center p-6">
               <div className="text-[#8b4513] text-5xl mb-4">
                 <i className="fas fa-tree"></i>
               </div>
               <h3 className="text-xl font-semibold text-slate-800">80% Open Space</h3>
             </div>
-            <div className="text-center p-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
+            <div className="text-center p-6">
               <div className="text-[#8b4513] text-5xl mb-4">
                 <i className="fas fa-dumbbell"></i>
               </div>
               <h3 className="text-xl font-semibold text-slate-800">Clubhouse with 20+ Amenities</h3>
             </div>
-            <div className="text-center p-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
+            <div className="text-center p-6">
               <div className="text-[#8b4513] text-5xl mb-4">
                 <i className="fas fa-train-subway"></i>
               </div>
@@ -232,7 +232,7 @@ export default function Home() {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-10">
             <span className="text-[#8b4513] font-semibold tracking-wider text-sm uppercase">AMENITIES</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mt-2" data-aos="fade-up" data-aos-duration="600">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mt-2">
               Amenities that Define Excellence
             </h2>
           </div>
@@ -247,7 +247,7 @@ export default function Home() {
               { name: 'Spa', image: 'spa.jpg' },
               { name: 'Reflexology Track', image: 'reflexologypath.jpg' }
             ].map((amenity, index) => (
-              <div key={amenity.name} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-duration="600" data-aos-delay={100 + index * 50}>
+              <div key={amenity.name} className="bg-white rounded-lg overflow-hidden shadow-sm  ">
                 <div className="aspect-[4/3] relative">
                   <Image 
                     src={`/amenities/${amenity.image}`}
