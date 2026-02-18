@@ -38,7 +38,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="flex items-center gap-10 ml-auto pr-5">
+        <div className="hidden md:flex items-center gap-10 ml-auto pr-5">
           <ul className="flex items-center gap-5 list-none m-0 p-0">
             <li>
               <Link 
@@ -71,7 +71,7 @@ export function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden flex flex-col cursor-pointer mr-5"
+          className="md:hidden flex flex-col cursor-pointer mr-5 ml-auto"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           <span className="w-6 h-0.5 bg-gray-900 my-0.5 transition-all duration-300"></span>
@@ -82,7 +82,7 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200">
+        <div className="md:hidden bg-white border-t border-gray-200 w-full">
           <div className="flex flex-col p-4">
             <Link 
               href="/" 
@@ -102,7 +102,7 @@ export function Navbar() {
               href="https://app.documenso.com/d/L1Q7iioFWeYwjQeVQ4CYB"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 bg-amber-700 hover:bg-amber-800 text-white px-4 py-3 rounded-lg font-medium transition duration-300 text-center"
+              className="w-full mt-3 bg-amber-700 hover:bg-amber-800 text-white px-4 py-3 rounded-lg font-medium transition duration-300 text-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Submit Expression of Interest

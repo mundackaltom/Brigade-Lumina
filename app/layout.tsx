@@ -5,6 +5,7 @@ import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import ScrollToTop from '@/components/ScrollToTop'
 import TopStrip from '@/components/TopStrip'
+import EOIStrip from '@/components/EOIStrip'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -57,11 +58,12 @@ export default function RootLayout({
         />
       </head>
   <body className={`${inter.className} ${montserrat.variable} ${playfair.variable} ${cormorantGaramond.variable}`}>
-        <ScrollToTop />
-        <Navbar />
-        <TopStrip />
-        <main>{children}</main>
-        <Footer />
+  <ScrollToTop />
+  <Navbar />
+  <EOIStrip />
+  <TopStrip />
+  <main>{children}</main>
+  <Footer />
         <Script 
           src="https://unpkg.com/aos@2.3.1/dist/aos.js"
           strategy="lazyOnload"
