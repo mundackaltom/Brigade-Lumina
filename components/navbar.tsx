@@ -46,7 +46,7 @@ export function Navbar() {
                 className="no-underline text-gray-900 font-semibold text-[0.95rem] hover:text-gray-600 hover:bg-gray-100 py-3 px-3 rounded-lg whitespace-nowrap transition-all duration-200 relative group"
               >
                 Home
-                <span className="absolute bottom-2 left-3 right-3 h-0.5 bg-gray-900"></span>
+                <span className="absolute bottom-2 left-3 right-3 h-0.5 bg-gray-900 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
               </Link>
             </li>
             <li>
@@ -55,7 +55,7 @@ export function Navbar() {
                 className="no-underline text-gray-900 font-semibold text-[0.95rem] hover:text-gray-600 hover:bg-gray-100 py-3 px-3 rounded-lg whitespace-nowrap transition-all duration-200 relative group"
               >
                 Contact Us
-                <span className="absolute bottom-2 left-3 right-3 h-0.5 bg-gray-900"></span>
+                <span className="absolute bottom-2 left-3 right-3 h-0.5 bg-gray-900 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
               </Link>
             </li>
           </ul>

@@ -32,8 +32,29 @@ const cormorantGaramond = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: 'Brigade Lumina',
-  description: 'Premium Homes in Bangalore',
+  title: "Brigade Lumina | Luxury 2 & 3 BHK Apartments on Tumkur Road, Bangalore",
+  description:
+    "Discover Brigade Lumina, a premium residential project on Tumkur Main Road, West Bangalore. Spacious 2 & 3 BHK apartments with world-class amenities and modern design.",
+  keywords: [
+    "Brigade Lumina",
+    "Brigade Lumina Tumkur Road",
+    "Brigade Lumina Bangalore",
+    "2 BHK Tumkur Road",
+    "3 BHK Tumkur Road",
+    "Apartments in West Bangalore",
+  ],
+  metadataBase: new URL("https://brigadeluminaofficial.com"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Brigade Lumina – Premium Homes in Bangalore",
+    description:
+      "Luxury 2 & 3 BHK apartments on Tumkur Main Road.",
+    url: "https://brigadeluminaofficial.com",
+    siteName: "Brigade Lumina",
+    type: "website",
+  },
 }
 
 export default function RootLayout({
@@ -55,6 +76,39 @@ export default function RootLayout({
         <link 
           href="https://unpkg.com/aos@2.3.1/dist/aos.css" 
           rel="stylesheet" 
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ApartmentComplex",
+              name: "Brigade Lumina",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Tumkur Main Road",
+                addressLocality: "Bangalore",
+                addressRegion: "Karnataka",
+                addressCountry: "India",
+              },
+              url: "https://brigadeluminaofficial.com",
+              description: "Premium residential project with luxury 2 & 3 BHK apartments",
+              amenityFeature: [
+                {
+                  "@type": "LocationFeatureSpecification",
+                  name: "Swimming Pool"
+                },
+                {
+                  "@type": "LocationFeatureSpecification", 
+                  name: "Gymnasium"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  name: "Kids Play Area"
+                }
+              ]
+            }),
+          }}
         />
       </head>
   <body className={`${inter.className} ${montserrat.variable} ${playfair.variable} ${cormorantGaramond.variable}`}>
