@@ -31,31 +31,14 @@ const cormorantGaramond = Cormorant_Garamond({
   display: 'swap',
 })
 
-export const metadata: Metadata = {
-  title: "Brigade Lumina | Luxury 2 & 3 BHK Apartments on Tumkur Road, Bangalore",
+export const metadata = {
+  title: "Brigade Lumina Tumkur Road | 2 & 3 BHK Apartments in Bangalore",
   description:
-    "Discover Brigade Lumina, a premium residential project on Tumkur Main Road, West Bangalore. Spacious 2 & 3 BHK apartments with world-class amenities and modern design.",
-  keywords: [
-    "Brigade Lumina",
-    "Brigade Lumina Tumkur Road",
-    "Brigade Lumina Bangalore",
-    "2 BHK Tumkur Road",
-    "3 BHK Tumkur Road",
-    "Apartments in West Bangalore",
-  ],
-  metadataBase: new URL("https://brigadeluminaofficial.com"),
-  alternates: {
-    canonical: "/",
+    "Brigade Lumina is a premium 2 & 3 BHK apartment project on Tumkur Main Road, Bangalore. Explore floor plans, pricing, amenities and book a site visit.",
+  icons: {
+    icon: "/brigade.png",
   },
-  openGraph: {
-    title: "Brigade Lumina – Premium Homes in Bangalore",
-    description:
-      "Luxury 2 & 3 BHK apartments on Tumkur Main Road.",
-    url: "https://brigadeluminaofficial.com",
-    siteName: "Brigade Lumina",
-    type: "website",
-  },
-}
+};
 
 export default function RootLayout({
   children,
